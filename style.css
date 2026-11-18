@@ -1,0 +1,13 @@
+/* Внешний CSS: базовые настройки документа */
+body {
+    font-family: 'Times New Roman', Times, serif; /* Шрифт с засечками, как в оригинале */
+    line-height: 1.4;
+    padding: 20px;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* Сброс стандартных отступов у абзацев для точного совпадения */
+p {
+    margin: 10px 0;
+}
