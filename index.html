@@ -7,7 +7,6 @@
 </head>
 <body>
 
-
     <header>
         <h1>Сайт студента</h1>
         <p><em>Личная страница студента НВГУ</em></p>
@@ -15,14 +14,13 @@
 
     <hr>
 
-
     <section>
         <h2>Обо мне</h2>
         <p>
-            <img src="https://raw.githubusercontent.com/wqera213/lab2Gol/main/smile.jpg" alt="Фото студента" width="150" height="200">
+            <img src="smile.jpg" alt="Фото студента" width="150" height="200">
         </p>
         <p>
-            Этот сайт принадлежит <strong>Иванову Ивану Ивановичу</strong>,
+            Этот сайт принадлежит <strong>Голов ИН</strong>,
             студенту <abbr title="Нижневартовский государственный университет">НВГУ</abbr>.
        </p>
     </section>
@@ -252,32 +250,32 @@
         <h3>Пример формы регистрации сайта</h3>
         <fieldset style="width: 500px; margin: 20px; padding: 10px;">
             <legend style="color: #0000cc; font-weight: bold; font-size: 1.2em;">Пример</legend>
-            
+
             <div style="margin-bottom: 10px;">
                 <label style="display: block; margin-bottom: 3px;">Логин:</label>
                 <input type="text" name="login" style="width: 300px;">
             </div>
-            
+
             <div style="margin-bottom: 10px;">
                 <label style="display: block; margin-bottom: 3px;">Пароль:</label>
                 <input type="password" name="pass" style="width: 300px;">
             </div>
-            
+
             <div style="margin-bottom: 10px;">
                 <label style="display: block; margin-bottom: 3px;">URL адрес сайта:</label>
                 <input type="text" name="url" value="http://" style="width: 300px;">
             </div>
-            
+
             <div style="margin-bottom: 10px;">
                 <label style="display: block; margin-bottom: 3px;">Название сайта:</label>
                 <input type="text" name="sitename" style="width: 300px;">
             </div>
-            
+
             <div style="margin-bottom: 10px;">
                 <label style="display: block; margin-bottom: 3px;">Описание сайта:</label>
                 <textarea name="description" style="width: 300px; height: 100px; resize: vertical;"></textarea>
             </div>
-            
+
             <div style="margin-bottom: 10px;">
                 <label style="display: block; margin-bottom: 3px;">Тема сайта:</label>
                 <select name="theme">
@@ -287,12 +285,12 @@
                     <option>Наука</option>
                 </select>
             </div>
-            
+
             <div style="margin-bottom: 10px;">
                 <label style="display: block; margin-bottom: 3px;">Баннер 88x31:</label>
                 <input type="file" name="banner">
             </div>
-            
+
             <div style="margin-bottom: 10px;">
                 <button type="reset" style="padding: 5px 15px;">Очистить</button>
                 <button type="submit" style="padding: 5px 15px;">Отправить</button>
@@ -305,6 +303,143 @@
     <footer>
         <p>&copy; 2026 Гол ив. Лабораторная работа №2. Все права защищены.</p>
     </footer>
+
+    <!-- ================= ВТОРОЙ ФАЙЛ (tables.html) ================= -->
+    <hr>
+
+    <section>
+        <h2>Таблицы в HTML (tables.html)</h2>
+
+        <!-- 1. ВНЕШНИЙ CSS: Подключение внешнего файла стилей -->
+        <link rel="stylesheet" href="style.css">
+
+        <!-- 2. ВНУТРЕННИЙ CSS: Стили для конкретных элементов этой страницы -->
+        <style>
+            /* ID для главного заголовка */
+            #main-title {
+                color: #00008b; /* Темно-синий */
+                font-family: Arial, sans-serif;
+                text-align: center;
+                font-size: 28px;
+                letter-spacing: 2px;
+                margin-bottom: 30px;
+            }
+
+            /* Класс для подзаголовка */
+            .sub-title {
+                color: #800080; /* Фиолетовый */
+                font-family: Arial, sans-serif;
+                font-weight: bold;
+                font-size: 20px;
+                margin-top: 30px;
+                margin-bottom: 15px;
+            }
+
+            /* Стили для текста с выделением */
+            .highlight-cyan {
+                background-color: #00ffff;
+                color: #000;
+            }
+
+            .highlight-yellow {
+                background-color: #ffff00;
+                color: #000;
+            }
+
+            .highlight-grey {
+                background-color: #c0c0c0;
+                color: #000;
+            }
+
+            .highlight-pink {
+                background-color: #ffc0cb;
+                color: #000;
+            }
+
+            /* Стили для терминов */
+            .term-blue {
+                color: #0000ff;
+            }
+
+            .term-magenta {
+                color: #ff00ff;
+                font-style: italic;
+                font-weight: bold;
+                font-size: 18px;
+            }
+
+            .term-red {
+                color: #ff0000;
+                font-style: italic;
+            }
+
+            /* Стили для таблицы */
+            .math-table {
+                border-collapse: collapse;
+                margin: 0 auto; /* Центрирование таблицы */
+                text-align: center;
+                font-family: Arial, sans-serif;
+                font-size: 14px;
+            }
+
+            .math-table td, .math-table th {
+                border: 1px solid #000;
+                padding: 5px 10px;
+            }
+        </style>
+
+        <!-- Заголовок с использованием ID -->
+        <h1 id="main-title">Т а б л и ц ы &nbsp; в &nbsp; H T M L</h1>
+
+        <p>
+            <span class="highlight-cyan">Одним из наиболее мощных и широко применяемых в <b>HTML</b> средств являются <i>таблицы.</i></span>
+        </p>
+
+        <p>
+            <span class="highlight-yellow">Понятие табличного представления данных не нуждается в дополнительном пояснении.</span> В HTML таблицы используются не только традиционно, как метод представления данных, но и как средство форматирования Web-страниц.
+        </p>
+
+        <!-- Подзаголовок с использованием класса -->
+        <div class="sub-title">Создание простейших HTML-таблиц</div>
+
+        <p>
+            <span class="term-magenta">Описание</span> <span class="term-blue">таблицы</span> должно располагаться внутри раздела документа &lt;BODY&gt;.
+        </p>
+
+        <p>
+            Каждая <span class="term-blue">таблица</span> должна начинаться тэгом &lt;TABLE&gt; и завершаться тэгом &lt;/TABLE&gt;.
+        </p>
+
+        <p>
+            <span class="highlight-grey">Каждая строка начинается тэгом &lt;TR&gt; (Table Row) и завершается тэгом &lt;/TR&gt;.</span> <span class="term-red">Отдельная</span> ячейка в строке обрамляется парой тегов &lt;TD&gt; и &lt;/TD&gt; (Table Data) или &lt;TH&gt; и &lt;/TH&gt; (Table Header)
+        </p>
+
+        <p style="text-align: right; font-weight: bold; margin-top: 30px;">Таблица 1</p>
+
+        <p style="text-align: center; color: #00008b; font-weight: bold; font-style: italic; font-family: Arial, sans-serif; margin-bottom: 5px;">
+            Математические выражения
+        </p>
+
+        <!-- 3. IN-LINE CSS (атрибут style) для точной настройки ширины колонок -->
+        <table class="math-table" style="width: 80%;">
+            <!-- Первая строка (заголовки) -->
+            <tr>
+                <td style="width: 15%; background-color: #ffffff;"><i>Поле1</i></td>
+                <td style="width: 15%; background-color: #000000; color: #ffffff; font-weight: bold;">Поле2</td>
+                <td style="width: 15%; background-color: #00ffff;">Поле3</td>
+                <td style="width: 25%; background-color: #ffc0cb; font-style: italic;">Поле4</td>
+                <td style="width: 30%; background-color: #ffff00;">Поле5</td>
+            </tr>
+            <!-- Вторая строка (формулы) -->
+            <tr>
+                <td>(a+b)<sup>2</sup></td>
+                <td>a<sup>2</sup>-b<sup>2</sup></td>
+                <td>(a-b)<sup>3</sup></td>
+                <td>A<sub>1</sub>+A<sub>2</sub>+...+A<sub>i</sub></td>
+                <td>y=x<sup>2</sup></td>
+            </tr>
+        </table>
+    </section>
 
 </body>
 </html>
